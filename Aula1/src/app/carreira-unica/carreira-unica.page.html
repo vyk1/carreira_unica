@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Nova Página</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Teoria da Computação</ion-card-subtitle>
+      <ion-card-title>Linguagens Regulares</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      São reconhecidas por Autômatos Finitos
+      <ion-img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Hierarquia_de_Chomsky.PNG"></ion-img>
+      <ion-label>Fonte: Wikipedia</ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>Teste</ion-label>
+      <ion-button (click)="handlePinClick()" fill="outline" slot="end">Pin</ion-button>
+    </ion-item>
+
+    <ion-card-content>
+      This is content, without any paragraph or header tags,
+      within an ion-card-content element.
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
