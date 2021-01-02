@@ -5,35 +5,56 @@
 </ion-header>
 
 <ion-content>
+
   <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Teoria da Computação</ion-card-subtitle>
-      <ion-card-title>Linguagens Regulares</ion-card-title>
+    <ion-list>
+      <ion-label>Definição</ion-label>
+      <ion-item>
+        <ul>
+          <li>Podem ser aplicadas em analisadores léxicos, design de hardware</li>
+          <li>Apenas armazenam o estado atual</li>
+          <li>São definidas pela quíntula</li>
+        </ul>
+      </ion-item>
+      <ion-label>Mega Man X</ion-label>
+      <ion-item>
+        <ul>
+          <li>Podem ser <a href="#det">determinísticos</a> ou <a href="#notdet">não</a></li>
+        </ul>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header id="det">
+      <ion-card-title>Determinísticos</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
-      An automaton is deterministic (DFA) if there is only one state to which automaton can transit from the current
-      state on each input.
+      Possui apenas um estado que pode transitar para cada input.
+    </ion-card-content>
+  </ion-card>
 
-      An automaton is non-deterministic (NFA) if it has multiple transitions from current state on a single input.
+  <ion-card>
+    <ion-card-header id="notdet">
+      <ion-card-title>Não Determinísticos</ion-card-title>
+    </ion-card-header>
 
-      If the machine has more than one option for a computation on a single input then it is non deterministic.
-
+    <ion-card-content>
+      Possui múltiplas transições de um estado atual para cada input.
+      http://www.din.uem.br/yandre/lfa.htm
+      
       http://www.din.uem.br/yandre/TC/lista1-resp.pdf
     </ion-card-content>
   </ion-card>
 
   <ion-card>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>Teste</ion-label>
-      <ion-button (click)="handlePinClick()" fill="outline" slot="end">Pin</ion-button>
-    </ion-item>
+    <ion-card-header>
+      <ion-card-title>
+        Como ler ab*c...?
+      </ion-card-title>
+    </ion-card-header>
 
-    <ion-card-content>
-      This is content, without any paragraph or header tags,
-      within an ion-card-content element.
-    </ion-card-content>
   </ion-card>
 
 </ion-content>

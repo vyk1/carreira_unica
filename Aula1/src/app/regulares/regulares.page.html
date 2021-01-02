@@ -12,12 +12,24 @@
     </ion-card-header>
 
     <ion-card-content>
-      São reconhecidas por
-
-      <ion-button (click)="navigateToAF()">
-      <!-- <ion-button tab="automatos-finitos"> -->
-        <b>Autômatos Finitos</b>
-      </ion-button>
+      Uma <abbr title="Cadeia de caracteres">Linguagem</abbr> Regular é constituída de strings
+      finitas apesar do conjunto de string ser finito.
+      <br />
+      Podem ser lidos por
+      <ul>
+        <ion-text color="secondary">
+          <li (click)="navigateToAF()"><b>Autômatos Finitos (Determinísticos ou Não)</b></li>
+        </ion-text>
+        <li><b>Expressões Regulares</b></li>
+      </ul>
+      <br />
+      Das quais possuem operações regulares
+      <ul>
+        <li><b>União</b></li>
+        <li><b>Intersecção</b></li>
+        <li><b>Diferença</b></li>
+        <li><b>Fecho de Kleene</b></li>
+      </ul>
       <ion-img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Hierarquia_de_Chomsky.PNG"></ion-img>
       <ion-label>Fonte: Wikipedia</ion-label>
     </ion-card-content>
@@ -29,11 +41,6 @@
       <ion-label>Teste</ion-label>
       <ion-button (click)="handlePinClick()" fill="outline" slot="end">Pin</ion-button>
     </ion-item>
-
-    <ion-card-content>
-      This is content, without any paragraph or header tags,
-      within an ion-card-content element.
-    </ion-card-content>
   </ion-card>
 
   <ion-card>
