@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Linguagens Regulares</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Teoria da Computação</ion-card-subtitle>
+      <ion-card-title>Linguagens Regulares</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      São reconhecidas por
+
+      <ion-button (click)="navigateToAF()">
+      <!-- <ion-button tab="automatos-finitos"> -->
+        <b>Autômatos Finitos</b>
+      </ion-button>
+      <ion-img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Hierarquia_de_Chomsky.PNG"></ion-img>
+      <ion-label>Fonte: Wikipedia</ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>Teste</ion-label>
+      <ion-button (click)="handlePinClick()" fill="outline" slot="end">Pin</ion-button>
+    </ion-item>
+
+    <ion-card-content>
+      This is content, without any paragraph or header tags,
+      within an ion-card-content element.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-list-header>
+      <ion-label>Fontes</ion-label>
+    </ion-list-header>
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          https://www.geeksforgeeks.org/difference-between-dfa-and-nfa/?ref=rp
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          https://ths.rwth-aachen.de/wp-content/uploads/sites/4/regular_exercises_ws1718.pdf
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          http://www.decom.ufop.br/anderson/BCC242/Lista3.pdf
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          https://homepages.dcc.ufmg.br/~rimsa/documents/decom035/lessons/Aula07.pdf
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+</ion-content>

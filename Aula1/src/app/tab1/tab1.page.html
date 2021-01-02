@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,11 +13,19 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-row (click)="carreiraUnica()">
-    <ion-col size="12" class="ion-text-center">
-      <ion-button size="large">Carreira Única</ion-button>
-    </ion-col>
-  </ion-row>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Resumo</ion-card-subtitle>
+      <ion-card-title>Linguagens Regulares</ion-card-title>
+    </ion-card-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <ion-card-content>
+      Sobre Linguagens Regulares, AFD, AFND, ER...
+    </ion-card-content>
+
+    <ion-button (click)="navigateToLR()" expand="block">
+      <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-card>
+
 </ion-content>

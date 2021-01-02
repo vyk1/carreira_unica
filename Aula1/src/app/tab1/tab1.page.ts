@@ -10,8 +10,8 @@ export class Tab1Page {
 
   constructor(public router: Router) { }
 
-  carreiraUnica() {
-    this.router.navigate(['carreira-unica'], {})
+  navigateToLR() {
+    this.router.navigate(['regulares'], {})
   }
 
 }

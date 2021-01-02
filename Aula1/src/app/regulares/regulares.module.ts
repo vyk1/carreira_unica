@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CarreiraUnicaPageRoutingModule } from './carreira-unica-routing.module';
+import { RegularesPageRoutingModule } from './regulares-routing.module';
 
-import { CarreiraUnicaPage } from './carreira-unica.page';
+import { RegularesPage } from './regulares.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CarreiraUnicaPageRoutingModule
+    RegularesPageRoutingModule
   ],
-  declarations: [CarreiraUnicaPage]
+  declarations: [RegularesPage]
 })
-export class CarreiraUnicaPageModule {}
+export class RegularesPageModule {}

@@ -7,9 +7,9 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'carreira-unica',
-    loadChildren: () => import('./carreira-unica/carreira-unica.module').then( m => m.CarreiraUnicaPageModule)
-  }
+    path: 'regulares',
+    loadChildren: () => import('./regulares/regulares.module').then(m => m.RegularesPageModule)
+  },
 ];
 @NgModule({
   imports: [
@@ -17,4 +17,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

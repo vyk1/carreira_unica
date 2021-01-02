@@ -1,7 +1,7 @@
 {
-  "name": "CarreiraUnica",
+  "name": "teoria-da-computacao-2020",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "Victoria Botelho Martins (vyk1)",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",

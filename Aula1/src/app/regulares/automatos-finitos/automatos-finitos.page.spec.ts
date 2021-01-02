@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { CarreiraUnicaPage } from './carreira-unica.page';
+import { AutomatosFinitosPage } from './automatos-finitos.page';
 
-describe('CarreiraUnicaPage', () => {
-  let component: CarreiraUnicaPage;
-  let fixture: ComponentFixture<CarreiraUnicaPage>;
+describe('AutomatosFinitosPage', () => {
+  let component: AutomatosFinitosPage;
+  let fixture: ComponentFixture<AutomatosFinitosPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CarreiraUnicaPage ],
+      declarations: [ AutomatosFinitosPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CarreiraUnicaPage);
+    fixture = TestBed.createComponent(AutomatosFinitosPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
