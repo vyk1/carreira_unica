@@ -12,10 +12,11 @@
     </ion-card-header>
     <ion-item>
       <ul>
-        <li>São o tipo mais simples de Máquina de Turing</li>
+        <li>O tipo mais simples de Máquina de Turing</li>
         <li>A única memória utilizada é aquela
           gasta para armazenar a cadeia de entrada.</li>
         <li>Portanto, apenas armazenam o estado atual</li>
+        <li>Reconhecem linguagens regulares</li>
       </ul>
     </ion-item>
 
@@ -27,7 +28,6 @@
         <li>Fita unidirecional -></li>
         <li>Fita de leitura (não grava símbolos)</li>
         <li>No caso dos determinísticos, tempo necessário: sendo w uma cadeia |w|=n; é O(n)</li>
-        <li>Podem ser aplicadas em analisadores léxicos, design de hardware...</li>
       </ul>
     </ion-item>
 
@@ -38,6 +38,20 @@
       <ul>
         <li>Podem ser <a (click)="scrollToElement('det')">determinísticos</a> ou <a
             (click)="scrollToElement('notdet')">não</a></li>
+      </ul>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Operações</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ul>
+        <li><b>União</b></li>
+        <li><b>Intersecção</b></li>
+        <li><b>Diferença</b></li>
+        <li><b>Fecho de Kleene</b></li>
       </ul>
     </ion-item>
   </ion-card>
@@ -85,9 +99,8 @@
               <li>Lê-se: para cada par (estado, símbolo de entrada) determina um CONJUNTO DE ESTADOS</li>
             </ul>
           </ion-item>
-          <ion-item>Portanto, possibilita alternativas distintas< </ion-item>
-              <ion-item>Possui múltiplas transições de um estado atual para cada símbolo de entrada.
-              </ion-item>
+          <ion-item>Portanto, possibilita alternativas distintas</ion-item>
+          <ion-item>Possui múltiplas transições de um estado atual para cada símbolo de entrada.</ion-item>
     </ion-card-content>
   </ion-card>
 
@@ -97,7 +110,7 @@
     </ion-card-header>
     <ion-card-content>
       <ion-item>
-        Um Autômato que aceita 0s e 1s que terminam com 01 é expresso por (0+1)*01
+        Um Autômato que aceita strings com 0s e 1s e que terminam com 01 é expresso por (0+1)*01
       </ion-item>
     </ion-card-content>
   </ion-card>

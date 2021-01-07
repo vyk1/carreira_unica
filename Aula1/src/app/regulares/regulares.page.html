@@ -6,81 +6,63 @@
 
 <ion-content>
   <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Teoria da Computação</ion-card-subtitle>
-      <ion-card-title>Linguagens Regulares</ion-card-title>
-    </ion-card-header>
-
     <ion-card-content>
-      Uma <abbr title="Cadeia de caracteres">Linguagem</abbr> Regular é constituída de strings
-      finitas apesar do conjunto de strings ser finito.
-      <br />
-      <p>Desta forma, sendo L uma linguagem, uma gramática gera L e um autômato reconhece L</p>
-      <p><b>Não confundir Linguagens Regulares com Gramáticas Regulares</b></p>
-      Podem ser lidos por
-      <ul>
-        <ion-text color="secondary">
-          <li (click)="navigateToAF()"><b>Autômatos Finitos (Determinísticos ou Não)</b></li>
-        </ion-text>
-        <li><b>Expressões Regulares</b></li>
-      </ul>
-      <br />
-      Das quais possuem operações regulares
-      <ul>
-        <li><b>União</b></li>
-        <li><b>Intersecção</b></li>
-        <li><b>Diferença</b></li>
-        <li><b>Fecho de Kleene</b></li>
-      </ul>
-      <ion-img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Hierarquia_de_Chomsky.PNG"></ion-img>
-      <ion-label>Fonte: Wikipedia</ion-label>
+      <ion-item>
+        Uma Linguagem Regular é constituída de strings
+        finitas apesar do conjunto de strings ser finito.
+      </ion-item>
+      <ion-item>Desta forma, sendo L uma linguagem, uma gramática gera L e um autômato reconhece L</ion-item>
+      <ion-item><b>Não confundir Linguagens Regulares com Gramáticas Regulares</b></ion-item>
+      <ion-item>
+        <ion-item-header>
+          São reconhecidos por
+        </ion-item-header>
+        <ul>
+          <li (click)="navigateToAF()">
+            <ion-text color="secondary">Autômatos Finitos (Determinísticos ou Não)</ion-text>
+          </li>
+          <li>Expressões Regulares</li>
+        </ul>
+        <br />
+      </ion-item>
     </ion-card-content>
   </ion-card>
 
   <ion-card>
     <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>Teste</ion-label>
-      <ion-button (click)="handlePinClick()" fill="outline" slot="end">Pin</ion-button>
+      <ion-img id="chom" src="../../assets/images/chomsky-h.jpg"></ion-img>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fonte: 1*</ion-label>
     </ion-item>
   </ion-card>
 
   <ion-card>
-    <ion-list-header>
+    <ion-card-header>Exemplos</ion-card-header>
+    <ion-item>
+      <ul>
+        <li>Analisadores léxicos</li>
+        <li>Verificar se tamanho de uma palavra é ímpar ou par</li>
+        <li>Verificar se a quantidade de dígitos 1 em uma palavra é
+          ímpar/par</li>
+        <li>Pesquisar por ocorrência de um padrão em uma palavra</li>
+      </ul>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
       <ion-label>Fontes</ion-label>
-    </ion-list-header>
-    <ion-list>
-      <ion-item>
-        <ion-label>
-          https://www.geeksforgeeks.org/difference-between-dfa-and-nfa/?ref=rp
-        </ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>
-          https://ths.rwth-aachen.de/wp-content/uploads/sites/4/regular_exercises_ws1718.pdf
-        </ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>
-          http://www.decom.ufop.br/anderson/BCC242/Lista3.pdf
-        </ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>
-          https://homepages.dcc.ufmg.br/~rimsa/documents/decom035/lessons/Aula07.pdf
-        </ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>
-          http://www.din.uem.br/yandre/TC/lista1-resp.pdf
-        </ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>
-          http://www.din.uem.br/yandre/lfa.htm
-        </ion-label>
-      </ion-item>
-    </ion-list>
+    </ion-card-header>
+
+    <ion-virtual-scroll [items]="items" approxItemHeight="320px">
+      <ion-card *virtualItem="let item; let itemBounds = bounds;">
+        <ion-card-header>
+          <ion-card-title>{{ item.title }} {{item.key}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>{{ item.url }}</ion-card-content>
+      </ion-card>
+    </ion-virtual-scroll>
   </ion-card>
 
 </ion-content>
