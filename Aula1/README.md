@@ -1,0 +1,1 @@
+# [Movido!](https://github.com/vyk1/resumo-teoria-da-computacao) 

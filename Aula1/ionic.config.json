@@ -1,7 +1,0 @@
-{
-  "name": "CarreiraUnica",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
