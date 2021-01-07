@@ -7,22 +7,39 @@
 <ion-content>
 
   <ion-card>
-    <ion-list>
-      <ion-label>Definição</ion-label>
-      <ion-item>
-        <ul>
-          <li>Podem ser aplicadas em analisadores léxicos, design de hardware</li>
-          <li>Apenas armazenam o estado atual</li>
-          <li>São definidas pela quíntula</li>
-        </ul>
-      </ion-item>
-      <ion-label>Mega Man X</ion-label>
-      <ion-item>
-        <ul>
-          <li>Podem ser <a href="#det">determinísticos</a> ou <a href="#notdet">não</a></li>
-        </ul>
-      </ion-item>
-    </ion-list>
+    <ion-card-header>
+      <ion-card-title>Definição</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ul>
+        <li>São o tipo mais simples de Máquina de Turing</li>
+        <li>A única memória utilizada é aquela
+          gasta para armazenar a cadeia de entrada.</li>
+        <li>Portanto, apenas armazenam o estado atual</li>
+      </ul>
+    </ion-item>
+
+    <ion-card-header>
+      <ion-card-title>Detalhes</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ul>
+        <li>Fita unidirecional -></li>
+        <li>Fita de leitura (não grava símbolos)</li>
+        <li>No caso dos determinísticos, tempo necessário: sendo w uma cadeia |w|=n; é O(n)</li>
+        <li>Podem ser aplicadas em analisadores léxicos, design de hardware...</li>
+      </ul>
+    </ion-item>
+
+    <ion-card-header>
+      <ion-card-title>Tipos</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ul>
+        <li>Podem ser <a (click)="scrollToElement('det')">determinísticos</a> ou <a
+            (click)="scrollToElement('notdet')">não</a></li>
+      </ul>
+    </ion-item>
   </ion-card>
 
   <ion-card>
@@ -31,7 +48,25 @@
     </ion-card-header>
 
     <ion-card-content>
-      Possui apenas um estado que pode transitar para cada input.
+      <ion-item>São definidas pela quíntula:
+      </ion-item>
+      <ion-item>
+        <ul>
+          <li>Q: conjunto finito não vazio de estados</li>
+          <li>E: conjunto finito de símbolos (alfabeto)</li>
+          <ul>d: função de transição de estados (indica as transições possíveis em cada configuração)
+            <li>Q x E => Q</li>
+          </ul>
+          <ul>Lê-se: para cada par (estado, símbolo de entrada) determina um NOVO ESTADO <br /> d(p,a) =q=>indicando o
+            <b>determinismo</b>
+          </ul>
+          <li>q0: estado inicial (pertence ao Q)</li>
+          <li>F: conjunto finito de estados finais (aceitação); subconjunto de Q</li>
+        </ul>
+      </ion-item>
+
+      <ion-item>Possui apenas um estado que pode transitar para cada símbolo de entrada.
+      </ion-item>
     </ion-card-content>
   </ion-card>
 
@@ -41,10 +76,29 @@
     </ion-card-header>
 
     <ion-card-content>
-      Possui múltiplas transições de um estado atual para cada input.
-      http://www.din.uem.br/yandre/lfa.htm
-      
-      http://www.din.uem.br/yandre/TC/lista1-resp.pdf
+      <ion-item>São definidas pela mesma quíntupla dos AFDs</ion-item>
+      <ion-item><b>PORÉM:</b></ion-item>
+      <ion-item>permite zero, uma ou mais transições de um estado sobre o MESMO símbolo de entrada< </ion-item>
+          <ion-item>
+            <ul>
+              <li>d: Q x E => 2^Q</li>
+              <li>Lê-se: para cada par (estado, símbolo de entrada) determina um CONJUNTO DE ESTADOS</li>
+            </ul>
+          </ion-item>
+          <ion-item>Portanto, possibilita alternativas distintas< </ion-item>
+              <ion-item>Possui múltiplas transições de um estado atual para cada símbolo de entrada.
+              </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Dicas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        Um Autômato que aceita 0s e 1s que terminam com 01 é expresso por (0+1)*01
+      </ion-item>
     </ion-card-content>
   </ion-card>
 
