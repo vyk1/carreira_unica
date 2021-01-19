@@ -107,11 +107,12 @@ namespace ProgramacaoOrientadoObjetos.Classes_e_Ojetos {
         public bool Transferir(double valor, ContaCorrente contaDestino) {
             if (Saldo < valor) {
                 Console.WriteLine($"Não foi possível concluir a transação. Seu saldo {Saldo} é inferior ao valor que deseja transferir. {Saldo}");
+                return false;
             }
 
             Saldo -= valor;
             contaDestino.Depositar(valor);
-            Console.WriteLine($"Transferência realizada com sucesso! Seu saldo é de: {Saldo}");
+            Console.WriteLine($"Transferência realizada para {contaDestino.Titular} com sucesso! Seu saldo é de: {Saldo}");
             return true;
         }
 
@@ -121,15 +122,13 @@ namespace ProgramacaoOrientadoObjetos.Classes_e_Ojetos {
             Console.WriteLine($"A posição escolhida randomicamente foi a {num}");
 
             if (num % 2 == 0) {
-                Console.WriteLine($"A conta de {conta1.Titular} ganhou a aposta de R${valor}"); 
-                //conta2.Sacar(valor);
-                //conta1.Depositar(valor);
-                
+                Console.WriteLine($"A conta de {conta1.Titular} ganhou a aposta de R${valor}");
+                conta2.Transferir(valor, conta1);
+
             } else {
-                Console.WriteLine($"A conta de {conta2.Titular} ganhou a aposta de R${valor}"); 
-                //conta1.Sacar(valor);
-                //conta2.Depositar(valor);
-                
+                Console.WriteLine($"A conta de {conta2.Titular} ganhou a aposta de R${valor}");
+                conta1.Transferir(valor, conta2);
+
             }
 
         }
